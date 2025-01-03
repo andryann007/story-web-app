@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+<file target-language="zh" source-language="en" original="lit-localize-inputs" datatype="plaintext">
+<body>
+<trans-unit id="s6abb1cd87fe0114e">
+  <source>Home</source>
+  <target>主页</target>
+</trans-unit>
+<trans-unit id="s5d88bcf38f034ab2">
+  <source>Post Story</source>
+  <target>帖子故事</target>
+</trans-unit>
+<trans-unit id="se957aac89298c890">
+  <source>About Me</source>
+  <target>关于我</target>
+</trans-unit>
+<trans-unit id="s1fa96bca92224298">
+  <source>Welcome to</source>
+  <target>欢迎来到</target>
+</trans-unit>
+<trans-unit id="sebdacb94fadc3e78">
+  <source>Do you have any interesting / memorable story?</source>
+  <target>你有什么有趣/难忘的故事吗？</target>
+</trans-unit>
+<trans-unit id="s270168184863eb73">
+  <source>With this website you can save &amp; share your stories without missing any precious moments in each of your stories</source>
+  <target>通过这个网站，你可以保存和分享你的故事，而不会错过每个故事中的任何珍贵时刻</target>
+</trans-unit>
+<trans-unit id="sf6dd6fff0d73c9b7">
+  <source>Story Detail</source>
+  <target>故事细节</target>
+</trans-unit>
+<trans-unit id="s5776ca35d7a3cd67">
+  <source>Posted at</source>
+  <target>发表于</target>
+</trans-unit>
+<trans-unit id="s5e8250fb85d64c23">
+  <source>Close</source>
+  <target>关闭</target>
+</trans-unit>
+<trans-unit id="s8daa1db5187d4ad4">
+  <source>Detail</source>
+  <target>细节</target>
+</trans-unit>
+<trans-unit id="s8c48ddc92d6f6c22">
+  <source>Story List</source>
+  <target>故事列表</target>
+</trans-unit>
+<trans-unit id="sbcf868c923727468">
+  <source>Story Description</source>
+  <target>故事描述</target>
+</trans-unit>
+<trans-unit id="s4e4b1b498766ac0d">
+  <source>Story Description field must not be empty !!!</source>
+  <target>故事描述字段不能为空！！！</target>
+</trans-unit>
+<trans-unit id="s04eaa8c68ee4b7b8">
+  <source>Story Images</source>
+  <target>故事图片</target>
+</trans-unit>
+<trans-unit id="s75fe1eeb903c6062">
+  <source>Story Image must not be empty !!!</source>
+  <target>故事图片不能为空！！！</target>
+</trans-unit>
+<trans-unit id="sb3d4f79d9d8b71e5">
+  <source>Submit</source>
+  <target>提交</target>
+</trans-unit>
+</body>
+</file>
+</xliff>

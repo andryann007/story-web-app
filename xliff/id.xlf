@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+<file target-language="id" source-language="en" original="lit-localize-inputs" datatype="plaintext">
+<body>
+<trans-unit id="s6abb1cd87fe0114e">
+  <source>Home</source>
+  <target>Beranda</target>
+</trans-unit>
+<trans-unit id="s5d88bcf38f034ab2">
+  <source>Post Story</source>
+  <target>Post Cerita</target>
+</trans-unit>
+<trans-unit id="se957aac89298c890">
+  <source>About Me</source>
+  <target>Tentang Saya</target>
+</trans-unit>
+<trans-unit id="s1fa96bca92224298">
+  <source>Welcome to</source>
+  <target>Selamat datang di</target>
+</trans-unit>
+<trans-unit id="sebdacb94fadc3e78">
+  <source>Do you have any interesting / memorable story?</source>
+  <target>Apakah kamu memiliki cerita yang menarik / berharga?</target>
+</trans-unit>
+<trans-unit id="s270168184863eb73">
+  <source>With this website you can save &amp; share your stories without missing any precious moments in each of your stories</source>
+  <target>Dengan website ini kamu bisa menyimpan dan membagikan cerita mu tanpa harus kehilangan setiap momen berharga yang ada di semua ceritamu</target>
+</trans-unit>
+<trans-unit id="sf6dd6fff0d73c9b7">
+  <source>Story Detail</source>
+  <target>Detail Cerita</target>
+</trans-unit>
+<trans-unit id="s5776ca35d7a3cd67">
+  <source>Posted at</source>
+  <target>Diposting pada</target>
+</trans-unit>
+<trans-unit id="s5e8250fb85d64c23">
+  <source>Close</source>
+  <target>Tutup</target>
+</trans-unit>
+<trans-unit id="s8daa1db5187d4ad4">
+  <source>Detail</source>
+  <target>Detail</target>
+</trans-unit>
+<trans-unit id="s8c48ddc92d6f6c22">
+  <source>Story List</source>
+  <target>Kumpulan Cerita</target>
+</trans-unit>
+<trans-unit id="sbcf868c923727468">
+  <source>Story Description</source>
+  <target>Deskripsi Cerita</target>
+</trans-unit>
+<trans-unit id="s4e4b1b498766ac0d">
+  <source>Story Description field must not be empty !!!</source>
+  <target>Kolom Deskripsi Cerita tidak boleh kosong !!!</target>
+</trans-unit>
+<trans-unit id="s04eaa8c68ee4b7b8">
+  <source>Story Images</source>
+  <target>Gambar Cerita</target>
+</trans-unit>
+<trans-unit id="s75fe1eeb903c6062">
+  <source>Story Image must not be empty !!!</source>
+  <target>Gambar Cerita tidak boleh kosong !!!</target>
+</trans-unit>
+<trans-unit id="sb3d4f79d9d8b71e5">
+  <source>Submit</source>
+  <target>Kirim</target>
+</trans-unit>
+</body>
+</file>
+</xliff>

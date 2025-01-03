@@ -1,0 +1,112 @@
+$fs-nav-link: 16px;
+$fw-bold: bold;
+$max-line-title: 1;
+$max-line: 3;
+
+@use "vendors";
+
+@mixin reset-position {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "Merriweather";
+  font-weight: normal;
+  src: url("../public/fonts/Merriweather-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Oswald";
+  font-weight: normal;
+  src: url("../public/fonts/Oswald-Regular.ttf");
+}
+
+@font-face {
+  font-family: "PlayfairDisplay";
+  font-weight: normal;
+  src: url("../public/fonts/PlayfairDisplay-Regular.ttf");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  @include reset-position;
+}
+
+main {
+  background-image: url("../public/images/hero-image-2.jpg");
+  opacity: 0.9;
+}
+
+button {
+  font-family: "Oswald", Verdana, sans-serif;
+
+  &:hover {
+    font-weight: $fw-bold;
+  }
+}
+
+.navbar-brand {
+  font-family: "Merriweather", Verdana, sans-serif;
+}
+
+.nav-link {
+  font-family: "Oswald", Verdana, sans-serif;
+  font-size: $fs-nav-link;
+
+  &:hover {
+    font-weight: $fw-bold;
+  }
+}
+
+select,
+option {
+  font-family: "Oswald", Verdana, sans-serif;
+}
+
+h1,
+label {
+  font-family: "Merriweather", Verdana, sans-serif;
+  font-weight: bold;
+}
+
+.card {
+  .card-img-top {
+    object-fit: cover;
+  }
+
+  .card-body {
+    .card-title,
+    .modal-title {
+      font-weight: bold;
+      font-family: "Merriweather", Verdana, sans-serif;
+      display: -webkit-box;
+      line-clamp: $max-line-title;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      -webkit-line-clamp: $max-line-title;
+      -webkit-box-orient: vertical;
+    }
+
+    .short-story-description,
+    .modal-description {
+      font-family: "PlayfairDisplay", Verdana, sans-serif;
+    }
+
+    .short-story-description {
+      display: -webkit-box;
+      line-clamp: $max-line;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      -webkit-line-clamp: $max-line;
+      -webkit-box-orient: vertical;
+    }
+  }
+
+  .card-footer {
+    font-family: "PlayfairDisplay", Verdana, sans-serif;
+  }
+}

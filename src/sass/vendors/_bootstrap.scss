@@ -1,0 +1,48 @@
+@use "sass:map";
+
+@use "../vendors-extensions/bootstrap/components/buttons" as btn;
+@use "../vendors-extensions/bootstrap/components/card" as card;
+@use "../vendors-extensions/bootstrap/components/close" as btn-close;
+@use "../vendors-extensions/bootstrap/components/forms" as form;
+@use "../vendors-extensions/bootstrap/components/navbar" as navbar;
+@use "../vendors-extensions/bootstrap/components/nav" as nav;
+@use "../vendors-extensions/bootstrap/components/modal" as modal;
+@use "../vendors-extensions/bootstrap/variables/colors" as color;
+
+@import "../../../node_modules/bootstrap/scss/functions";
+$btn-padding-x: btn.$padding-x;
+$btn-padding-y: btn.$padding-y;
+$btn-border-radius: btn.$border-radius;
+$btn-border-radius-sm: btn.$border-radius-sm;
+$btn-border-radius-lg: btn.$border-radius-lg;
+
+$btn-close-padding-x: btn-close.$btn-close-padding-x;
+$btn-close-padding-y: btn-close.$btn-close-padding-y;
+$btn-close-color: btn-close.$btn-close-color;
+$btn-close-opacity: btn-close.$btn-close-opacity;
+$btn-close-hover-opacity: btn-close.$btn-close-hover-opacity;
+
+$card-border-color: card.$border-color;
+$card-border-radius: card.$border-radius;
+$card-border-width: card.$border-width;
+$card-bg: card.$bg;
+$card-color: card.$color;
+
+$form-select-bg: form.$form-select-bg;
+$form-select-color: form.$form-select-color;
+$form-select-indicator-color: form.$form-select-indicator-color;
+
+$modal-backdrop-opacity: modal.$modal-backdrop-opacity;
+$modal-content-bg: modal.$modal-content-bg;
+$modal-content-color: modal.$modal-content-color;
+
+$nav-link-color: nav.$nav-link-color;
+$nav-link-hover-color: nav.$nav-link-hover-color;
+
+$navbar-nav-link-padding: navbar.$navbar-nav-link-padding;
+$navbar-light-color: navbar.$navbar-light-color;
+
+@import "../../../node_modules/bootstrap/scss/variables";
+$theme-colors: map.deep-merge($theme-colors, color.$theme-colors);
+
+@import "../../../node_modules/bootstrap/scss/bootstrap";
