@@ -9,7 +9,7 @@ class HeroImage extends LitElement {
       margin-top: 75px;
     }
 
-    .hero-image { 
+    .hero__image { 
       width: 100%;
       height: 600px;
       min-width: 1000px;
@@ -20,7 +20,7 @@ class HeroImage extends LitElement {
       opacity: 0.95;
     }
 
-    .hero-text {
+    .hero__text {
       position: absolute;
       border-radius: 8px;
       background-color: black;
@@ -33,13 +33,13 @@ class HeroImage extends LitElement {
       text-align: center;
     }
             
-    .hero-text > h1 {
+    .hero__text > h1 {
       font-family: "Merriweather", Verdana, sans-serif;
       font-size: 36px;
       height: 80px;
     }
     
-    .hero-text > p {
+    .hero__text > p {
       font-family: "PlayfairDisplay", Verdana, sans-serif;
       font-size: 20px;
     }
@@ -49,21 +49,21 @@ class HeroImage extends LitElement {
         margin-top: 60px;
       }
 
-      .hero-image {
+      .hero__image {
         min-width: 100%;
         max-height: 600px;
         width: 100%;
         height: 550px;
       }
-      .hero-text {
+      .hero__text {
         width: 75%;
         padding: 8px;
       }
-      .hero-text > h1 {
+      .hero__text > h1 {
         font-size: 20px;
         height: 60px;
       }
-      .hero-text > p {
+      .hero__text > p {
         font-size: 16px;
       }
     }
@@ -72,20 +72,20 @@ class HeroImage extends LitElement {
       .hero {
         margin-top: 60px;
       }
-      .hero-image { 
+      .hero__image { 
         min-width: 100%;
         max-height: 550px;
         width: 100%;
         height: 500px;
       }
-      .hero-text {
+      .hero__text {
         padding: 12px;
       }
-      .hero-text > h1 {
+      .hero__text > h1 {
         font-size: 24px;
         height: 70px;
       }
-      .hero-text > p {
+      .hero__text > p {
         font-size: 18px;
       }
     }
@@ -99,10 +99,10 @@ class HeroImage extends LitElement {
   render() {
     return html`
       <div id="hero" class="hero">
-        <img class="hero-image"
+        <img class="hero__image"
           src="./images/hero-image-1.jpg" alt="hero image">
 
-        <div class="hero-text">
+        <div class="hero__text">
             <h1>${msg('Welcome to')} Story App</h1>
             <p>${msg('Do you have any interesting / memorable story?')}</p>
             <p>${msg('With this website you can save & share your stories without missing any precious moments in each of your stories')}</p>

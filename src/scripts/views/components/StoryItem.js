@@ -1,12 +1,9 @@
-import { LitElement, html } from 'lit';
+import { html } from 'lit';
+import LitWithoutShadowDom from './base/LitWithoutShadowDom';
 import { convertDateFormat } from '../../utils/utils';
 import { msg, updateWhenLocaleChanges } from '@lit/localize';
 
-class StoryItem extends LitElement {
-  createRenderRoot() {
-    return this;
-  }
-
+class StoryItem extends LitWithoutShadowDom {
   static properties = {
     _id : {
       type: String,
@@ -66,7 +63,7 @@ class StoryItem extends LitElement {
                         <img src="${this._photoUrl}" class="card-img-top" alt="${this._name} story images">
                         <div class="card-body">
                             <h5 class="card-title modal-title">${this._name}</h5>
-                            <p class="card-text modal-description">${this._description}</p>
+                            <p class="card-text modal__description">${this._description}</p>
                         </div>
                         <div class="card-footer text-muted text-end modal-footer">
                           ${msg('Posted at')} : ${convertDateFormat(this._createdAt)}
@@ -84,7 +81,7 @@ class StoryItem extends LitElement {
           <img src="${this._photoUrl}" class="card-img-top" alt="${this._name} story images">
           <div class="card-body">
               <h5 class="card-title">${this._name}</h5>
-              <p class="card-text short-story-description">${this._description}</p>
+              <p class="card-text short__story__description">${this._description}</p>
               <button type="button" id="${this._id}" class="btn btn-navy float-end" data-bs-toggle="modal" data-bs-target="#${this._id}-modal">${msg('Detail')}</button>
           </div>
           <div class="card-footer text-muted text-end">

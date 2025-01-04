@@ -90,12 +90,12 @@ label {
       -webkit-box-orient: vertical;
     }
 
-    .short-story-description,
-    .modal-description {
+    .short__story__description,
+    .modal__description {
       font-family: "PlayfairDisplay", Verdana, sans-serif;
     }
 
-    .short-story-description {
+    .short__story__description {
       display: -webkit-box;
       line-clamp: $max-line;
       overflow: hidden;

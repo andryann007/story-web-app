@@ -1,11 +1,8 @@
-import { LitElement, html, css } from 'lit';
+import { html, css } from 'lit';
+import LitWithoutShadowDom from '../base/LitWithoutShadowDom';
 import { msg, updateWhenLocaleChanges } from '@lit/localize';
 
-class PostForm extends LitElement {
-  createRenderRoot() {
-    return this;
-  }
-
+class PostForm extends LitWithoutShadowDom {
   static styles = css`
     #validationStoryImageChange {
       background-repeat: no-repeat;
@@ -21,7 +18,7 @@ class PostForm extends LitElement {
 
   render() {
     return html`
-      <div class="container-fluid p-3">
+      <div class="m-auto container-fluid py-5">
         <h1 class="pt-5 mt-3 text-center">${msg('Post Story')}</h1>
 
         <div class="row">

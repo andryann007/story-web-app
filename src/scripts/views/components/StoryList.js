@@ -1,11 +1,8 @@
-import { LitElement, html } from 'lit';
+import { html } from 'lit';
+import LitWithoutShadowDom from './base/LitWithoutShadowDom';
 import { msg, updateWhenLocaleChanges } from '@lit/localize';
 
-class StoryList extends LitElement {
-  createRenderRoot() {
-    return this;
-  }
-
+class StoryList extends LitWithoutShadowDom {
   constructor() {
     super();
     updateWhenLocaleChanges(this);

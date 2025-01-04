@@ -3,6 +3,17 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
+const htmlWebpackPluginConfig = {
+  meta: {
+    viewport:
+      'width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0',
+    'theme-color': '#4285f4',
+  },
+  templateParameters: {
+    brandName: 'Money Tracker App',
+  },
+};
+
 module.exports = {
   entry: {
     app: path.resolve(__dirname, 'src/scripts/index.js'),
@@ -52,12 +63,14 @@ module.exports = {
       title: 'Home',
       filename: 'index.html',
       template: path.resolve(__dirname, 'src/views/index.html'),
+      ...htmlWebpackPluginConfig,
     }),
 
     new HtmlWebpackPlugin({
       title: 'Post Story',
       filename: 'post.html',
       template: path.resolve(__dirname, 'src/views/post.html'),
+      ...htmlWebpackPluginConfig,
     }),
 
     new CopyWebpackPlugin({

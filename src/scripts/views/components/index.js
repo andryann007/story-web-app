@@ -1,6 +1,8 @@
-import './app-bar';
-import './app-footer';
-import './hero-image';
-import './story-item';
-import './story-list';
-import './post-form';
+import './AppBar';
+import './AppFooter';
+import './HeroImage';
+import './NavLink';
+import './NavLinks';
+import './StoryItem';
+import './StoryList';
+import './form/PostForm';
