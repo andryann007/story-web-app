@@ -1,40 +1,36 @@
 import { createStoryItemTemplate } from '../templates/template-creator';
-import STORY_DUMMY from '../../../public/data/DATA.json';
+import CheckUserAuth from './auth/check-user-auth';
+import Stories from '../../network/stories';
+import { showErrorMessage } from '../../utils/utils';
 
 const Home = {
   async init() {
+    CheckUserAuth.checkLoginState();
+
     await this._initialData();
   },
 
   async _initialData() {
-    let STORIES = [];
+    try {
+      const response = await Stories.getAll();
+      const storyItems = response.data.listStory;
 
-    const isStorageExist = () => {
-      if (typeof Storage === undefined) {
-        alert('Maaf, browser anda tidak mendukung fitur local storage !!!');
-        return false;
-      } else {
-        return true;
+      const storyList = document.getElementById('storyList');
+      const storyListPlaceholder = document.getElementById('storyListPlaceholder');
+      const storyListContainer = document.getElementById('storyListContainer');
+      storyList.innerHTML = '';
+
+      for (const storyItem of storyItems) {
+        storyList.innerHTML += createStoryItemTemplate(storyItem);
       }
-    };
 
-    if (isStorageExist) {
-      if (!localStorage.getItem('stories')) {
-        localStorage.setItem('stories', JSON.stringify(STORY_DUMMY));
-
-        STORIES = JSON.parse(localStorage.getItem('stories'));
-      } else {
-        STORIES = JSON.parse(localStorage.getItem('stories')) || [];
-      }
+      storyListPlaceholder.classList.add('d-none');
+      storyListContainer.classList.remove('d-none');
+    } catch (error) {
+      console.log(error);
+      showErrorMessage(`Get All Story Failed`, error.response.data.message);
     }
-
-    const storyList = document.getElementById('storyList');
-    storyList.innerHTML = '';
-
-    for (const storyItem of STORIES.listStory) {
-      storyList.innerHTML += createStoryItemTemplate(storyItem);
-    }
-  }
+  },
 };
 
 export default Home;

@@ -4,10 +4,14 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import './views/components/index';
 import Home from './views/pages/home';
 import Post from './views/pages/post';
+import Login from './views/pages/auth/login';
+import Register from './views/pages/auth/register';
 
 const routes = {
   '/': Home,
-  '/post.html': Post
+  '/post.html': Post,
+  '/login.html': Login,
+  '/register.html': Register,
 };
 
 const detectRoute = () => routes[window.location.pathname];

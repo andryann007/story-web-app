@@ -1,16 +1,8 @@
-import { html, css } from 'lit';
+import { html } from 'lit';
 import LitWithoutShadowDom from '../base/LitWithoutShadowDom';
 import { msg, updateWhenLocaleChanges } from '@lit/localize';
 
 class PostForm extends LitWithoutShadowDom {
-  static styles = css`
-    #validationStoryImageChange {
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: contain;
-    }
-  `;
-
   constructor() {
     super();
     updateWhenLocaleChanges(this);
@@ -25,36 +17,24 @@ class PostForm extends LitWithoutShadowDom {
           <div class="col-12 col-md-6 mx-auto">
             <form class="card row row-cols-1 my-3" id="postStoryForm" novalidate>
               <div class="col-12 g-3 px-3 py-2">
-                <label class="form-label fw-bold fs-6" for="validationStoryDescription">${msg('Story Description')}</label>
-                <textarea class="form-control" id="validationStoryDescription" placeholder="Story Description" rows="3" required></textarea>
-                <div class="invalid-feedback">${msg('Story Description field must not be empty !!!')}</div>
+                <label class="form-label fw-bold fs-6" for="validationStoryDescription"
+                  >${msg('Story Description')}</label
+                >
+                <textarea-with-validation
+                  inputId="validationStoryDescription"
+                  invalidFeedbackMessage="Story Description field must not be empty !!!"
+                  required
+                ></textarea-with-validation>
               </div>
 
               <div class="col-12 g-3 px-3 py-2">
-                <label for="validationStoryImage" class="form-label fw-bold fs-6">${msg('Story Images')}</label>
-                <div class="text-center mb-3" id="storyImageContainer">
-                  <img
-                    class="img-fluid w-50 h-50"
-                    src="./images/upload.png"
-                    alt="Upload Images Illustration"
-                    id="validationStoryImageImg"
-                  />
-
-                  <div 
-                    class="w-100 h-100 d-none"
-                    id="validationStoryImageChange"
-                  ></div>
-                </div>
-
-                <input 
-                  type="file"
-                  class="form-control"
-                  id="validationStoryImage"
-                  accept="image/*"
-                  aria-label="upload story image" 
+                <input-image-with-preview
+                  inputId="validationStoryImage"
+                  invalidFeedbackMessage="Story Image must not be empty !!!"
+                  defaultImage="./images/upload.png"
+                  defaultImageAlt="Upload image placeholder"
                   required
-                /> 
-                <div class="invalid-feedback">${msg('Story Image must not be empty !!!')}</div>
+                ></input-image-with-preview>
               </div>
 
               <div class="col-12 p-3">

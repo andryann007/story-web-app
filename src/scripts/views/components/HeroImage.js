@@ -9,7 +9,7 @@ class HeroImage extends LitElement {
       margin-top: 75px;
     }
 
-    .hero__image { 
+    .hero__image {
       width: 100%;
       height: 600px;
       min-width: 1000px;
@@ -32,15 +32,15 @@ class HeroImage extends LitElement {
       color: white;
       text-align: center;
     }
-            
+
     .hero__text > h1 {
-      font-family: "Merriweather", Verdana, sans-serif;
+      font-family: 'Merriweather', Verdana, sans-serif;
       font-size: 36px;
       height: 80px;
     }
-    
+
     .hero__text > p {
-      font-family: "PlayfairDisplay", Verdana, sans-serif;
+      font-family: 'PlayfairDisplay', Verdana, sans-serif;
       font-size: 20px;
     }
 
@@ -72,7 +72,7 @@ class HeroImage extends LitElement {
       .hero {
         margin-top: 60px;
       }
-      .hero__image { 
+      .hero__image {
         min-width: 100%;
         max-height: 550px;
         width: 100%;
@@ -99,13 +99,16 @@ class HeroImage extends LitElement {
   render() {
     return html`
       <div id="hero" class="hero">
-        <img class="hero__image"
-          src="./images/hero-image-1.jpg" alt="hero image">
+        <img class="hero__image" src="./images/hero-image-1.jpg" alt="hero image" />
 
         <div class="hero__text">
-            <h1>${msg('Welcome to')} Story App</h1>
-            <p>${msg('Do you have any interesting / memorable story?')}</p>
-            <p>${msg('With this website you can save & share your stories without missing any precious moments in each of your stories')}</p>
+          <h1>${msg('Welcome to')} Story App</h1>
+          <p>${msg('Do you have any interesting / memorable story?')}</p>
+          <p>
+            ${msg(
+              'With this website you can save & share your stories without missing any precious moments in each of your stories',
+            )}
+          </p>
         </div>
       </div>
     `;

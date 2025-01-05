@@ -7,10 +7,9 @@ const htmlWebpackPluginConfig = {
   meta: {
     viewport:
       'width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0',
-    'theme-color': '#4285f4',
   },
   templateParameters: {
-    brandName: 'Money Tracker App',
+    brandName: 'Story App',
   },
 };
 
@@ -47,15 +46,15 @@ module.exports = {
           },
         ],
       },
-	  {
-		test: /\.(woff|woff2|eot|ttf|otf|svg)$/i,
+      {
+        test: /\.(woff|woff2|eot|ttf|otf|svg)$/i,
         type: 'asset/resource',
-		use: [
-		  {
-			loader: 'file-loader',
-		  },
-		],
-	  },
+        use: [
+          {
+            loader: 'file-loader',
+          },
+        ],
+      },
     ],
   },
   plugins: [
@@ -70,6 +69,20 @@ module.exports = {
       title: 'Post Story',
       filename: 'post.html',
       template: path.resolve(__dirname, 'src/views/post.html'),
+      ...htmlWebpackPluginConfig,
+    }),
+
+    new HtmlWebpackPlugin({
+      title: 'Login',
+      filename: 'login.html',
+      template: path.resolve(__dirname, 'src/views/auth/login.html'),
+      ...htmlWebpackPluginConfig,
+    }),
+
+    new HtmlWebpackPlugin({
+      title: 'Register',
+      filename: 'register.html',
+      template: path.resolve(__dirname, 'src/views/auth/register.html'),
       ...htmlWebpackPluginConfig,
     }),
 

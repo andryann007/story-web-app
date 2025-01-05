@@ -10,11 +10,13 @@ class StoryList extends LitWithoutShadowDom {
 
   render() {
     return html`
-      <h1 class="pt-3 mt-2 text-center">${msg('Story List')}</h1>
-      
-      <div class="container-fluid p-3">
-        <div id="storyList" class="row mb-5 g-3 justify-content-center">
-          <slot></slot>
+      <div id="storyListContainer" class="d-none">
+        <h1 class="pt-3 mt-2 text-center">${msg('Story List')}</h1>
+
+        <div class="container-fluid p-3">
+          <div id="storyList" class="row mb-5 g-3 justify-content-center">
+            <slot></slot>
+          </div>
         </div>
       </div>
     `;

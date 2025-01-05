@@ -1,14 +1,15 @@
+import CheckUserAuth from './auth/check-user-auth';
+import Stories from '../../network/stories';
+import { showSuccessMessage, showErrorMessage } from '../../utils/utils';
+
 const Post = {
   async init() {
+    CheckUserAuth.checkLoginState();
+
     this._initialListener();
   },
 
   _initialListener() {
-    const storyImageInput = document.querySelector('#validationStoryImage');
-    storyImageInput.addEventListener('change', () => {
-      this._updateImagePreview();
-    });
-
     const postStoryForm = document.querySelector('#postStoryForm');
     postStoryForm.addEventListener(
       'submit',
@@ -23,12 +24,24 @@ const Post = {
     );
   },
 
-  _postStory() {
+  async _postStory() {
     const formData = this._getFormData();
 
     if (this._validateFormData({ ...formData })) {
       console.log('formData');
       console.log(formData);
+
+      try {
+        await Stories.postStory(formData);
+        showSuccessMessage(
+          'Post Story Success',
+          `Congratulations, you have succesfully post a new story !!!`,
+          this._goToHomePage(),
+        );
+      } catch (error) {
+        console.log(error);
+        showErrorMessage(`Post Story Failed`, error.response.data.message);
+      }
     }
   },
 
@@ -38,35 +51,18 @@ const Post = {
 
     return {
       description: descriptionInput.value,
-      image: imageInput.files[0],
+      photo: imageInput.files[0],
     };
-  },
-
-  _updateImagePreview() {
-    const photoImg = document.querySelector('#validationStoryImageImg');
-    const photoImgChange = document.querySelector('#validationStoryImageChange');
-    const photoImgInput = document.querySelector('#validationStoryImage');
-
-    const photo = photoImgInput.files[0];
-    if (!photo) return;
-
-    const reader = new FileReader();
-    reader.onload = (event) => {
-      photoImgChange.parentElement.classList.remove('d-none');
-      photoImgChange.style.backgroundImage = `url('${event.target.result}')`;
-
-      photoImg.classList.remove('w-50', 'h-50');
-      photoImg.classList.add('w-100', 'h-100');
-      photoImg.src = `${event.target.result}`;
-    };
-
-    reader.readAsDataURL(photo);
   },
 
   _validateFormData(formData) {
     const formDataFiltered = Object.values(formData).filter((item) => item === '');
 
     return formDataFiltered.length === 0;
+  },
+
+  _goToHomePage() {
+    window.location.href = '/';
   },
 };
 

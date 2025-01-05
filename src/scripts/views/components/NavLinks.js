@@ -12,22 +12,29 @@ class NavLinks extends LitWithoutShadowDom {
 
   render() {
     return html`
-      <ul class="navbar-nav ms-auto">
+      <ul class="navbar-nav ms-auto align-items-center">
         <nav-link content="${msg('Home')}" to="/"></nav-link>
         <nav-link content="${msg('Post Story')}" to="/post.html"></nav-link>
-        <nav-link content="${msg('About Me')}" to="https://id.linkedin.com/in/andryan007"></nav-link>
+        <nav-link
+          content="${msg('About Me')}"
+          to="https://id.linkedin.com/in/andryan007"
+        ></nav-link>
 
-        <li class="nav-item ms-2">
+        <nav-link content="${msg(`Login`)}" to="/login.html" id="loginMenu"></nav-link>
+
+        <li class="nav-item ms-2 me-3">
           <select class="form-select" aria-label="Select language" @change=${this._localeChanged}>
             ${allLocales.map((locale) => {
-    return html`
+              return html`
                 <option value=${locale} ?selected=${locale === getLocale()}>
                   ${localeNames[locale]}
                 </option>
               `;
-  })}
+            })}
           </select>
         </li>
+
+        <nav-link-auth class="d-none" id="userLoggedMenu"></nav-link-auth>
       </ul>
     `;
   }

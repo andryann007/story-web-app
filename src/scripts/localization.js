@@ -19,5 +19,5 @@ export const localeNames = {
   en: 'English',
   id: 'Indonesia',
   zh: 'China',
-  jp: 'Japan'
+  jp: 'Japan',
 };

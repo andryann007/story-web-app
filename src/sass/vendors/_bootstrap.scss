@@ -1,15 +1,15 @@
-@use "sass:map";
+@use 'sass:map';
 
-@use "../vendors-extensions/bootstrap/components/buttons" as btn;
-@use "../vendors-extensions/bootstrap/components/card" as card;
-@use "../vendors-extensions/bootstrap/components/close" as btn-close;
-@use "../vendors-extensions/bootstrap/components/forms" as form;
-@use "../vendors-extensions/bootstrap/components/navbar" as navbar;
-@use "../vendors-extensions/bootstrap/components/nav" as nav;
-@use "../vendors-extensions/bootstrap/components/modal" as modal;
-@use "../vendors-extensions/bootstrap/variables/colors" as color;
+@use '../vendors-extensions/bootstrap/components/buttons' as btn;
+@use '../vendors-extensions/bootstrap/components/card' as card;
+@use '../vendors-extensions/bootstrap/components/close' as btn-close;
+@use '../vendors-extensions/bootstrap/components/forms' as form;
+@use '../vendors-extensions/bootstrap/components/navbar' as navbar;
+@use '../vendors-extensions/bootstrap/components/nav' as nav;
+@use '../vendors-extensions/bootstrap/components/modal' as modal;
+@use '../vendors-extensions/bootstrap/variables/colors' as color;
 
-@import "../../../node_modules/bootstrap/scss/functions";
+@import '../../../node_modules/bootstrap/scss/functions';
 $btn-padding-x: btn.$padding-x;
 $btn-padding-y: btn.$padding-y;
 $btn-border-radius: btn.$border-radius;
@@ -42,7 +42,7 @@ $nav-link-hover-color: nav.$nav-link-hover-color;
 $navbar-nav-link-padding: navbar.$navbar-nav-link-padding;
 $navbar-light-color: navbar.$navbar-light-color;
 
-@import "../../../node_modules/bootstrap/scss/variables";
+@import '../../../node_modules/bootstrap/scss/variables';
 $theme-colors: map.deep-merge($theme-colors, color.$theme-colors);
 
-@import "../../../node_modules/bootstrap/scss/bootstrap";
+@import '../../../node_modules/bootstrap/scss/bootstrap';
