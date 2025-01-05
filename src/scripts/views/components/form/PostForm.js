@@ -11,11 +11,11 @@ class PostForm extends LitWithoutShadowDom {
   render() {
     return html`
       <div class="m-auto container-fluid py-5">
-        <h1 class="pt-5 mt-3 text-center">${msg('Post Story')}</h1>
-
         <div class="row">
-          <div class="col-12 col-md-6 mx-auto">
-            <form class="card row row-cols-1 my-3" id="postStoryForm" novalidate>
+          <div class="col-12 col-md-6 mx-auto mt-5">
+            <h1 class="my-3 text-center">${msg('Post Story')}</h1>
+
+            <form class="card row row-cols-1 mx-3 my-3" id="postStoryForm" novalidate>
               <div class="col-12 g-3 px-3 py-2">
                 <label class="form-label fw-bold fs-6" for="validationStoryDescription"
                   >${msg('Story Description')}</label

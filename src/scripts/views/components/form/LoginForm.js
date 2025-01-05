@@ -11,11 +11,11 @@ class LoginForm extends LitWithoutShadowDom {
   render() {
     return html`
       <div class="m-auto container-fluid">
-        <h1 class="mt-3 text-center">${msg('Login')}</h1>
-
         <div class="row">
-          <div class="col-12 col-md-6 mx-auto">
-            <form class="card row row-cols-1 my-3" id="loginForm" novalidate>
+          <div class="col-12 col-md-6 mx-auto card bg-white bg-opacity-50">
+            <h1 class="my-3 text-center">${msg('Login')}</h1>
+
+            <form class="card row row-cols-1 mx-3 my-2" id="loginForm" novalidate>
               <div class="col-12 g-3 px-3 py-2">
                 <label for="validationUserEmail" class="form-label">${msg('Email')}</label>
 
@@ -44,7 +44,7 @@ class LoginForm extends LitWithoutShadowDom {
               </div>
             </form>
 
-            <div class="mt-3 text-center fw-bold">
+            <div class="fw-bold text-center my-3 p-3">
               ${msg('Do not have any account?')} <a href="/register.html">${msg('Register')}</a>
             </div>
           </div>

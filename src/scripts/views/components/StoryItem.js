@@ -46,7 +46,7 @@ class StoryItem extends LitWithoutShadowDom {
   render() {
     return html`
       <div class="modal" id="${this._id}-modal" tabindex="-1">
-        <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal__title">${this._name} ${msg('Story Detail')}</h5>
