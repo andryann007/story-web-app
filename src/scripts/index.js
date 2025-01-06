@@ -1,6 +1,8 @@
 import '../sass/main.scss';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
+import './utils/firebase';
+
 import './views/components/index';
 import Home from './views/pages/home';
 import Post from './views/pages/post';
