@@ -1,7 +1,7 @@
 import LitWithoutShadowDom from './base/LitWithoutShadowDom';
 import { html } from 'lit';
 import { msg, updateWhenLocaleChanges } from '@lit/localize';
-import { getUserToken, destroyUserToken } from '../../utils/utils';
+import { getUserToken, destroyUserToken } from '../../utils/storage';
 import Config from '../../globals/config';
 import CheckUserAuth from '../pages/auth/check-user-auth';
 

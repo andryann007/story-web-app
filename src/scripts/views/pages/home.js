@@ -1,7 +1,7 @@
 import { createStoryItemTemplate } from '../templates/template-creator';
 import CheckUserAuth from './auth/check-user-auth';
 import Stories from '../../network/stories';
-import { showErrorMessage } from '../../utils/utils';
+import { showErrorMessage } from '../../utils/toast-message';
 
 const Home = {
   async init() {

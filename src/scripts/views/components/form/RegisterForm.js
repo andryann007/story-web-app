@@ -14,7 +14,7 @@ class RegisterForm extends LitWithoutShadowDom {
         <div class="row">
           <div class="col-12 col-md-6 mx-auto card bg-white bg-opacity-50">
             <h1 class="my-3 text-center">${msg('Register')}</h1>
-            
+
             <form class="card row row-cols-1 mx-3 my-2" id="registerForm" novalidate>
               <div class="col-12 g-3 px-3 py-2">
                 <label for="validationUserName" class="form-label">${msg(`Name`)}</label>

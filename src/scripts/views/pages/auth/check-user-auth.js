@@ -1,4 +1,4 @@
-import { getUserToken } from '../../../utils/utils';
+import { getUserToken } from '../../../utils/storage';
 import Config from '../../../globals/config';
 
 const CheckUserAuth = {

@@ -28,6 +28,9 @@ class PostForm extends LitWithoutShadowDom {
               </div>
 
               <div class="col-12 g-3 px-3 py-2">
+                <label class="form-label fw-bold fs-6" for="validationStoryImage"
+                  >${msg('Story Image')}</label
+                >
                 <input-image-with-preview
                   inputId="validationStoryImage"
                   invalidFeedbackMessage="Story Image must not be empty !!!"

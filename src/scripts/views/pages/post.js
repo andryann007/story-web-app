@@ -1,6 +1,6 @@
 import CheckUserAuth from './auth/check-user-auth';
 import Stories from '../../network/stories';
-import { showSuccessMessage, showErrorMessage } from '../../utils/utils';
+import { showSuccessMessage, showErrorMessage } from '../../utils/toast-message';
 
 const Post = {
   async init() {
@@ -28,9 +28,6 @@ const Post = {
     const formData = this._getFormData();
 
     if (this._validateFormData({ ...formData })) {
-      console.log('formData');
-      console.log(formData);
-
       try {
         await Stories.postStory(formData);
         showSuccessMessage(

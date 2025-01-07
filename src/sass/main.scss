@@ -73,23 +73,22 @@ label {
 }
 
 .card {
-  .card-img-top {
+  &-img-top {
     object-fit: cover;
   }
 
-  .card__image {
+  &__image {
     width: 100%;
     height: 15vw;
     object-fit: cover;
+
+    &__placeholder {
+      width: 75%;
+    }
   }
 
-  .card__image__placeholder {
-    width: 75%;
-    object-fit: cover;
-  }
-
-  .card-body {
-    .card-title,
+  &-body {
+    &-title,
     .modal__title {
       font-weight: bold;
       font-family: 'Merriweather', Verdana, sans-serif;
@@ -116,14 +115,14 @@ label {
     }
   }
 
-  .card-footer {
+  &-footer {
     font-family: 'PlayfairDisplay', Verdana, sans-serif;
   }
 }
 
 @media screen and (max-width: 576px) {
   .card {
-    .card__image {
+    &__image {
       height: 60vw;
     }
   }
@@ -131,7 +130,7 @@ label {
 
 @media screen and (min-width: 576px) and (max-width: 992px) {
   .card {
-    .card__image {
+    &__image {
       height: 25vw;
     }
   }

@@ -24,7 +24,7 @@ class InputImageWithPreview extends LitWithoutShadowDom {
   render() {
     return html`
       <div
-        style="width: 100%; height: 20rem"
+        style="width: 100%; height: 18rem;"
         class="text-center mb-3 ${!this.defaultImage ? 'd-none' : ''}"
       >
         ${this._imagePreviewTemplate()}
@@ -99,7 +99,7 @@ class InputImageWithPreview extends LitWithoutShadowDom {
     if (this.defaultImage) {
       return html`
         <img
-          class="img-fluid w-50 h-100"
+          class="img-fluid h-100 px-2"
           src="${this.defaultImage}"
           alt="${this.defaultImageAlt}"
           id="${this.inputId || nothing}Img"

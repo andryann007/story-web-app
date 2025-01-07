@@ -12,7 +12,7 @@ class NavLinks extends LitWithoutShadowDom {
 
   render() {
     return html`
-      <ul class="navbar-nav ms-auto align-items-center">
+      <ul class="navbar-nav justify-content-center">
         <nav-link content="${msg('Home')}" to="/"></nav-link>
         <nav-link content="${msg('Post Story')}" to="/post.html"></nav-link>
         <nav-link

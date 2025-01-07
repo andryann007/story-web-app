@@ -1,6 +1,6 @@
 import Auth from '../../../network/auth';
 import CheckUserAuth from './check-user-auth';
-import { showSuccessMessage, showErrorMessage } from '../../../utils/utils';
+import { showSuccessMessage, showErrorMessage } from '../../../utils/toast-message';
 
 const Register = {
   async init() {
@@ -41,9 +41,6 @@ const Register = {
     const formData = this._getFormData();
 
     if (this._validateFormData({ ...formData })) {
-      console.log('formData');
-      console.log(formData);
-
       try {
         await Auth.register({
           name: formData.name,

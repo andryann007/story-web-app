@@ -1,6 +1,6 @@
 import { html } from 'lit';
 import LitWithoutShadowDom from './base/LitWithoutShadowDom';
-import { convertDateFormat } from '../../utils/utils';
+import { convertDateFormat } from '../../utils/date-formatter';
 import { msg, updateWhenLocaleChanges } from '@lit/localize';
 
 class StoryItem extends LitWithoutShadowDom {

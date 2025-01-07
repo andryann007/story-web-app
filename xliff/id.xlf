@@ -50,21 +50,49 @@
   <source>Story Description</source>
   <target>Deskripsi Cerita</target>
 </trans-unit>
-<trans-unit id="s4e4b1b498766ac0d">
-  <source>Story Description field must not be empty !!!</source>
-  <target>Kolom Deskripsi Cerita tidak boleh kosong !!!</target>
-</trans-unit>
-<trans-unit id="s04eaa8c68ee4b7b8">
-  <source>Story Images</source>
-  <target>Gambar Cerita</target>
-</trans-unit>
-<trans-unit id="s75fe1eeb903c6062">
-  <source>Story Image must not be empty !!!</source>
-  <target>Gambar Cerita tidak boleh kosong !!!</target>
-</trans-unit>
 <trans-unit id="sb3d4f79d9d8b71e5">
   <source>Submit</source>
   <target>Kirim</target>
+</trans-unit>
+<trans-unit id="scffc5af58dceda9e">
+  <source>Copyright</source>
+  <target>Hak Cipta</target>
+</trans-unit>
+<trans-unit id="s67749057edb2586b">
+  <source>Logout</source>
+  <target>Keluar</target>
+</trans-unit>
+<trans-unit id="sc8da3cc71de63832">
+  <source>Login</source>
+  <target>Login</target>
+</trans-unit>
+<trans-unit id="sd1f44f1a8bc20e67">
+  <source>Email</source>
+  <target>Email</target>
+</trans-unit>
+<trans-unit id="sf6e1665c7022a1f8">
+  <source>Password</source>
+  <target>Password</target>
+</trans-unit>
+<trans-unit id="s1141479c9325144d">
+  <source>Do not have any account?</source>
+  <target>Tidak memiliki akun?</target>
+</trans-unit>
+<trans-unit id="s2c15b9b13a3e2a80">
+  <source>Register</source>
+  <target>Register</target>
+</trans-unit>
+<trans-unit id="s9a6a417919a25d1b">
+  <source>Story Image</source>
+  <target>Gambar Cerita</target>
+</trans-unit>
+<trans-unit id="sef49aec68fd1dc66">
+  <source>Name</source>
+  <target>Nama</target>
+</trans-unit>
+<trans-unit id="s205b3e04ad286caa">
+  <source>Already have an account?</source>
+  <target>Sudah punya akun?</target>
 </trans-unit>
 </body>
 </file>

@@ -1,8 +1,8 @@
 import Auth from '../../../network/auth';
 import CheckUserAuth from './check-user-auth';
 import Config from '../../../globals/config';
-import { setUserToken } from '../../../utils/utils';
-import { showSuccessMessage, showErrorMessage } from '../../../utils/utils';
+import { setUserToken } from '../../../utils/storage';
+import { showSuccessMessage, showErrorMessage } from '../../../utils/toast-message';
 
 const Login = {
   async init() {
@@ -43,9 +43,6 @@ const Login = {
     const formData = this._getFormData();
 
     if (this._validateFormData({ ...formData })) {
-      console.log('formData');
-      console.log(formData);
-
       try {
         const response = await Auth.login({
           email: formData.email,
